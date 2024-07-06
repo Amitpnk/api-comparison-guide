@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option csharp_namespace = "ApiBattleField.GrpcClientConsole";
+
+message Product {
+    int32 id = 1;
+    string name = 2;
+    float price = 3;
+}
+
+service ProductServiceGrpc {
+    rpc GetAllProducts (Empty) returns (ProductsResponse);
+    rpc GetProductById (ProductIdRequest) returns (Product);
+    rpc CreateProduct (Product) returns (Product);
+    rpc UpdateProduct (Product) returns (Product);
+    rpc DeleteProduct (ProductIdRequest) returns (Empty);
+}
+
+message Empty {}
+
+message ProductIdRequest {
+    int32 id = 1;
+}
+
+message ProductsResponse {
+    repeated Product products = 1;
+}

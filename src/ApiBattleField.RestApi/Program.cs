@@ -9,9 +9,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IProductService, ProductService>();
 
+builder.Services.AddDbContext<ApplicationDbContext>(opt =>
+  opt.UseInMemoryDatabase("InMemoryCustomerDB")
+);
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

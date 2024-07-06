@@ -1,0 +1,6 @@
+@ApiBattleField.GraphQL_HostAddress = http://localhost:5107
+
+GET {{ApiBattleField.GraphQL_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

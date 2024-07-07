@@ -52,33 +52,15 @@ This project showcases how to implement CRUD operations for a product service us
 
 ### Running the Project
 
-1. Clone the repository:
+1. Clone the repository
    ```bash
    git clone https://github.com/Amitpnk/api-comparison-guide.git
    cd api-comparison-guide
    ```
 
-2. Build and run each service:
-
-   - **REST API**:
-     ```bash
-     cd rest
-     dotnet run
-     ```
-
-   - **GraphQL**:
-     ```bash
-     cd graphql
-     dotnet run
-     ```
-
-   - **gRPC**:
-     ```bash
-     cd grpc
-     dotnet run
-     ```
-
-3. Use tools like Postman, Insomnia, or BloomRPC to interact with the APIs.
+2. Build and run in visual studio
+   
+3. You can use tools such as Swagger, GraphQL UI, and gRPC client, or third-party tools like Postman, Insomnia, or BloomRPC to interact with the APIs.
 
 ## API Implementations
 
@@ -170,8 +152,14 @@ This project showcases how to implement CRUD operations for a product service us
 - **Service Definition**: `product.proto`
 - **RPC Methods**: `GetProduct`, `CreateProduct`, `UpdateProduct`, `DeleteProduct`
 - **Example Request**:
-  ```proto
-  rpc GetProduct (ProductIdRequest) returns (Product);
+  
+  For the UpdateProduct method, use the following message. For the CreateProduct method, pass only the name and price. For the DeleteProduct method, pass only the id
+  ```json
+  {
+    "id": 1,  
+    "name": "Updated Product",
+    "price": 50.0
+  }
   ```
 
 ## Comparison
@@ -188,6 +176,10 @@ This project showcases how to implement CRUD operations for a product service us
 ## Contributing
 
 Contributions are welcome! Please submit a pull request or open an issue to discuss your ideas.
+
+## Contact
+
+Having any issues or troubles getting started? Drop a mail to amit.naik8103@gmail.com or [Raise a Bug or Feature Request](https://github.com/Amitpnk/Onion-architecture-ASP.NET-Core/issues/new). Always happy to help.
 
 ## License
 

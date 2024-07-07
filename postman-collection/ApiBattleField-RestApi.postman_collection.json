@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "a5782518-09d6-4d5c-a113-9c49bd2365b3",
+		"name": "ApiBattleField-RestApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11002687",
+		"_collection_link": "https://universal-sunset-705171.postman.co/workspace/Personal~c89459ae-d13f-4ef4-8063-e204380a69bc/collection/11002687-a5782518-09d6-4d5c-a113-9c49bd2365b3?action=share&source=collection_link&creator=11002687"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:32777/api/Products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "32777",
+					"path": [
+						"api",
+						"Products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"name\": \"New Product\",\r\n  \"price\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:32777/api/Products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "32777",
+					"path": [
+						"api",
+						"Products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:32777/api/Products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "32777",
+					"path": [
+						"api",
+						"Products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"name\": \"Update Product\",\r\n  \"price\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:32777/api/Products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "32777",
+					"path": [
+						"api",
+						"Products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
